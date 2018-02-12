@@ -1,0 +1,17 @@
+{
+  "name": "liam-walls",
+  "version": "1.0.0",
+  "description": "Personal Site",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "firebase": "^4.9.1",
+    "gulp": "^3.9.1",
+    "sass": "^1.0.0-beta.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Liam Walls",
+  "license": "ISC"
+}

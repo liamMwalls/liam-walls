@@ -1,0 +1,31 @@
+[debug] [2018-02-12T16:34:55.421Z] ----------------------------------------------------------------------
+[debug] [2018-02-12T16:34:55.424Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\liamwalls\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-02-12T16:34:55.424Z] CLI Version:   3.17.4
+[debug] [2018-02-12T16:34:55.424Z] Platform:      win32
+[debug] [2018-02-12T16:34:55.425Z] Node Version:  v6.11.3
+[debug] [2018-02-12T16:34:55.425Z] Time:          Mon Feb 12 2018 16:34:55 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-12T16:34:55.425Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-12T16:34:55.439Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-12T16:34:55.440Z] > authorizing via signed-in user
+[debug] [2018-02-12T16:34:55.443Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/liamwalls-d3e92  
+  
+ Mon Feb 12 2018 16:34:55 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-12T16:34:56.105Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T16:34:56.107Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/liamwalls-d3e92/tokens  
+  
+ Mon Feb 12 2018 16:34:56 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-12T16:34:56.651Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\liamwalls\Documents\repos\liam-walls'...
+[info] 
+[debug] [2018-02-12T16:34:56.655Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liamwalls-d3e92  
+  
+ Mon Feb 12 2018 16:34:56 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-12T16:34:57.331Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-12T16:34:57.333Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784565161207/clients/_:getWebAppConfig  
+  
+ Mon Feb 12 2018 16:34:57 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-12T16:34:57.832Z] <<< HTTP RESPONSE 200
+[info] +  hosting: Local server: http://localhost:5000
+
