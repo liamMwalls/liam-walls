@@ -1,95 +1,65 @@
-(function () {
-    "use strict";
 
-    // Build new Flickity slider for header area
-    var elem = document.querySelector('.slider');
-    var flkty = new Flickity(elem, {
-        // options
-        pageDots: false,
-        wrapAround: true
-    });
-    Flickity.prototype.hasDragStarted = function (moveVector) {
-        // start dragging after pointer has moved 3 pixels in either direction
-        return !this.isTouchScrolling && Math.abs(moveVector.x) > 5;
-    };
+function autoType(elementClass, typingSpeed){
+    console.log("liam")
+  var thhis = $(elementClass);
+  console.log(thhis)
+  thhis.css({
+    "position": "relative",
+    "display": "inline-block"
+  });
 
-    // Impelment elmo scrolling animations
-    var scrollLinks = new elmo({
-        scrollSpeed: 1000,
-        block: $('header nav ul'),
-        targetOffset: 57,
-        topTarget: $('body'),
-        topOffset: $('header').height(),
-        scrollCallBack: function () {
-            $('nav ul').removeClass('show');
-        },
-        fix: $('header nav')
-    });
-    // Bind nav menu toggle button
-    $('.navBtn').on('click.toggle', function (e) {
-        e.preventDefault();
-        $('nav ul').toggleClass('show');
-    })
-}());
+  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  thhis = thhis.find(".text-js");
+  var text = thhis.text().trim().split('');
+  var amntOfChars = text.length;
+  var newString = "";
+  thhis.text("|");
+  setTimeout(function(){
+    thhis.css("opacity",1);
+    thhis.prev().removeAttr("style");
+    thhis.text("");
+    for(var i = 0; i < amntOfChars; i++){
+      (function(i,char){
+        setTimeout(function() {        
+          newString += char;
+          thhis.text(newString);
+        },i*typingSpeed);
+      })(i+1,text[i]);
+    }
+  },1000);
+}
 
-
-$(document).ready(function () {
-    $('body').addClass('loaded');
-
-    $(window).scroll(function () {
-        $('.fade_interaction').each(function () {
-            var el = $(this);
-            el.position();
-
-            if ($('html').scrollTop() > (el.position().top - 500) || $('body').scrollTop() > (el.position().top - 500)) {
-                el.addClass("fade");
-            }
-        });
-    });
+$(document).ready(function(){
+    setTimeout( function(){
+          autoType(".type-js", 200);
+    }, 200);
 });
 
-// 2. This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
+$('.js-menu-button').on('click', function(){
+    console.log("liam")
+    var $this = $(this);
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-var youtubePlayer; // Global var for youtube player
-
-function onYouTubeIframeAPIReady() {
-    var videoID = document.getElementsByClassName('hero-video-container')[0].attributes.getNamedItem('data-video-src').value;
-    youtubePlayer = new YT.Player('hero-video', {
-        height: '720',
-        width: '1280',
-        videoId: videoID,
-        events: {
-            'onReady': onPlayerReady
-        }
-    });
-}
-function onPlayerReady() {
-    var image = document.querySelector('.hero-video-preview'),
-      button = document.querySelector('.hero-video-container');
-
-    image.addEventListener('click', hidePreview, false);
-    button.addEventListener('click', hidePreview, false);
-}
-
-function hidePreview() {
-    var image = document.querySelector('.hero-video-preview'),
-      button = document.querySelector('.hero-video-container');
-
-    image.style.display = 'none';
-    button.className += ' active';
-    youtubePlayer.playVideo();
-}
-
-function showHideLinks() {
-    var icon = $('.socialLinkIcon');
-    if (icon.hasClass('show')) {
-        icon.removeClass('show');
+    if ($this.closest('.menu').hasClass('open')) {
+        $this.closest('.menu').addClass('close')
+        $this.closest('.menu').removeClass('open')
     } else {
-        icon.addClass(' show');
+        $this.closest('.menu').addClass('open')
+        $this.closest('.menu').removeClass('close');
     }
-}
+
+    setTimeout( function(){
+        $('.menu.close').removeClass('close')
+    }, 500)
+})
+$('.menu-nav__link').on('click', function(){
+    var $this = $(this);
+        
+    $this.closest('.menu').addClass('close')
+    $this.closest('.menu').removeClass('open')
+
+  setTimeout( function(){
+        $('.menu.close').removeClass('close')
+        autoType(".type-js", 200);
+    }, 500)
+
+})

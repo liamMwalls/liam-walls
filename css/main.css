@@ -1,0 +1,133 @@
+body {
+  overflow: hidden; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Happy Monkey', cursive; }
+
+p {
+  font-family: 'Open Sans', sans-serif; }
+
+.menu {
+  width: 50px;
+  height: 50px;
+  padding-left: 20px;
+  padding-top: 20px;
+  z-index: 5;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+  .menu.open {
+    animation: open 0.5s none linear;
+    width: calc(100% + 200px);
+    height: 100%;
+    background: red; }
+    .menu.open .menu-button__line {
+      position: absolute; }
+      .menu.open .menu-button__line--top {
+        transform: rotate(45deg);
+        transition: 0.55s; }
+      .menu.open .menu-button__line--middle {
+        opacity: 0; }
+      .menu.open .menu-button__line--bottom {
+        transform: rotate(-405deg);
+        transition: 0.55s; }
+  .menu.close {
+    top: 0;
+    left: 0;
+    animation: close 0.5s none linear;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    background: red; }
+    .menu.close .menu-button__line {
+      position: absolute; }
+      .menu.close .menu-button__line--top {
+        transform: rotate(0deg);
+        transition: 0.55s; }
+      .menu.close .menu-button__line--middle {
+        opacity: 1; }
+      .menu.close .menu-button__line--bottom {
+        transform: rotate(0deg);
+        transition: 0.55s; }
+
+@keyframes open {
+  0% {
+    width: 50px;
+    height: 100px; }
+  100% {
+    width: calc(100% + 200px);
+    height: 100%;
+    background: red; } }
+
+@keyframes close {
+  0% {
+    width: calc(100% + 200px);
+    height: 100%; }
+  100% {
+    width: 50px;
+    height: 100px;
+    background: transparent; } }
+
+.menu-button {
+  width: 30px;
+  max-width: 100%;
+  cursor: pointer; }
+
+.menu-button__line {
+  height: 5px;
+  width: 30px;
+  display: block;
+  background: #fff;
+  border-radius: 6px;
+  margin-top: 5px; }
+
+.menu-nav {
+  position: absolute;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  top: 20vh; }
+  .menu-nav li {
+    margin-top: 10px; }
+    .menu-nav li a {
+      font-size: 36px;
+      color: #fff;
+      font-family: 'Happy Monkey', cursive;
+      text-decoration: none; }
+
+.home-header {
+  margin-top: 30vh;
+  text-align: center; }
+
+.home-header-text h1 {
+  color: #fff;
+  font-family: 'Handlee', cursive;
+  font-size: 46px;
+  margin: 10px 0; }
+
+.text-js {
+  opacity: 0; }
+
+.cursor {
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: white;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate; }
+
+@keyframes flash {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }

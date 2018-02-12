@@ -8,8 +8,11 @@ liamApp.config(['$routeProvider', function ($routeProvider) {
     .when('/', {
         templateUrl: '/views/home.html',
     })
-    .when('/', {
-        templateUrl: '/views/blog.html',
+    .when('/blogs/', {
+        templateUrl: '/views/blogs.html',
+    })
+    .when('/work/', {
+        templateUrl: '/views/work.html',
     })
     .otherwise({
         redirectTo: '/'
