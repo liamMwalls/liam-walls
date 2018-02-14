@@ -1,14 +1,13 @@
 
 function autoType(elementClass, typingSpeed){
-    console.log("liam")
   var thhis = $(elementClass);
-  console.log(thhis)
+
   thhis.css({
     "position": "relative",
     "display": "inline-block"
   });
 
-  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  thhis.closest('.type-js').addClass('cursor');
   thhis = thhis.find(".text-js");
   var text = thhis.text().trim().split('');
   var amntOfChars = text.length;
@@ -35,31 +34,76 @@ $(document).ready(function(){
     }, 200);
 });
 
-$('.js-menu-button').on('click', function(){
-    console.log("liam")
-    var $this = $(this);
+$('.btn_nav').click(function(e) {
+  e.preventDefault();
+  
+  animateContent(this);
+ });
 
-    if ($this.closest('.menu').hasClass('open')) {
-        $this.closest('.menu').addClass('close')
-        $this.closest('.menu').removeClass('open')
-    } else {
-        $this.closest('.menu').addClass('open')
-        $this.closest('.menu').removeClass('close');
+function animateContent(btn, blog) {
+  // animate content
+  $('.page__style').addClass('animate_content');
+  $('.page__description').fadeOut(100).delay(2800).fadeIn();
+
+  setTimeout(function() {
+    $('.page__style').removeClass('animate_content');
+  }, 3200);
+
+  //remove fadeIn class after 1500ms
+  setTimeout(function() {
+    $('.page__style').removeClass('fadeIn');
+    $('.page__style').removeClass('loading');
+  }, 1500);
+
+  var $this = $(btn),
+      page = $this.attr("data-attr-page"),
+      href = $this.attr("href");
+
+  if(blog) {
+    href = "/#/blogs/blog/"
+  }
+
+  $('.active').removeClass('active');
+
+  setTimeout(function() {
+    $this.closest('.page__style').attr('class', 'page__style animate_content');
+    $this.closest('.page__style').addClass(page);
+    $this.addClass('active');
+    $(page).addClass('fadeIn');
+      window.location = href;
+  }, 1500);
+}
+
+$(function(){
+  var url = $(location).attr('href'),
+    parts = url.split("/"),
+    last_part = parts[parts.length-2];
+
+    if(last_part == "#"){
+      last_part = "home"
     }
 
-    setTimeout( function(){
-        $('.menu.close').removeClass('close')
-    }, 500)
-})
-$('.menu-nav__link').on('click', function(){
-    var $this = $(this);
-        
-    $this.closest('.menu').addClass('close')
-    $this.closest('.menu').removeClass('open')
+    var last_part = last_part.toLowerCase();
 
-  setTimeout( function(){
-        $('.menu.close').removeClass('close')
-        autoType(".type-js", 200);
-    }, 500)
+    console.log(last_part);
 
+    if(parts[parts.length-1] == "blog"){
+      last_part = "blogs"
+      window.location = "/#/blogs";
+    }
+
+    // if(last_part == "#") {
+    //   $('.page__style').attr('class', 'page__style home');
+    // } else {
+    //   $('.page__style').attr('class', 'page__style ' + last_part);
+    // }
+    var pageLink = $('[data-attr-page=' + last_part +']');
+
+    $('.page__style').attr('class', 'page__style loading ' + last_part);
+
+    pageLink.addClass('active');
+
+    setTimeout(function() {
+      $('.page__style').removeClass('loading');
+    }, 2200);
 })

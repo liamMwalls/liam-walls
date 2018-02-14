@@ -1,0 +1,30 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Happy Monkey', cursive;
+	color: $white;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	color: $white;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: underline;
+	color: $white;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.container {
+	padding: 0;
+}
+
+.page__style main {
+	padding: 0 15px;
+}

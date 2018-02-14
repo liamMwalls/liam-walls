@@ -1,39 +1,19 @@
-.home-header {
-	margin-top: 30vh;
+.home {
+	padding-top: 30vh;
 	text-align: center;
-}
-
-.home-header-text {
-	h1 {
-		color: $white;
-		font-family: 'Handlee', cursive;
-		font-size: 46px;
-		margin: 10px 0;
-	}
-}
-
-
-.text-js{
-  opacity: 0;
-}
-
-.cursor{
-  display: block;
-    height: 61px;
-    position: absolute;
-    bottom: 10px;
-    right: -5px;
-    width: 2px;
-    background-color: white;
-    z-index: 1;
-    animation: flash 0.5s none infinite alternate;
-}
-
-@keyframes flash{
-  0%{
-    opacity: 1;
+  main {
+    margin-top: 30px;
   }
-  100%{
-    opacity: 0;
+}
+
+.home-header {
+  p {
+    color: $white;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

@@ -22,3 +22,30 @@ $very-light-grey: #f5f5f5;
 
 $text-color: $black;
 $text-color-secondary: #7a7a7a;
+
+// ==========
+// == Grid ==
+// ==========
+// --
+$page-width: 114;
+// ---
+$max-col-count: 12;
+// ---
+$vspace: 1.5;
+$hspace: 2;
+// ---
+// Gutter values are set as a number to be multiplied by ten
+// These values will be passed into the unit-constructor mixin at compilation
+$gutters: (
+    10: 1,
+    20: 2,
+    30: 3,
+    40: 4,
+    50: 5
+);
+// ---
+$lg: 1000;
+$md: 860;
+$tablet: 767;
+$sm: 620;
+$phone: 320;

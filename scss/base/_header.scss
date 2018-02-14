@@ -1,154 +1,74 @@
 //============
 //	Header
 //============
-body {
-	overflow: hidden;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	font-family: 'Happy Monkey', cursive;
-}
-
-p {
-	font-family: 'Open Sans', sans-serif;
-}
-
-.menu {
-	width: 50px;
-	height: 50px;
-	padding-left: 20px;
-	padding-top: 20px;
-	z-index: 5;
-	position: absolute;
-	background: transparent;
-	top:0;
-	left: 0;
-	overflow: hidden;
-
-	&.open {
- 		animation: open 0.5s none linear;
- 		width: 100%;
- 		height: 100%;
- 		background: red;
-
- 		.menu-button__line {
- 			position: absolute;
-			&--top {
-				transform: rotate(45deg);
-  				transition: 0.55s;
-			}
-
-			&--middle {
-				opacity: 0;
-			}
-
-			&--bottom {
-				transform: rotate(-405deg);
-		  		transition: 0.55s;
-			}
-		}
+.header__text {
+  margin: 20px;
+  text-align: center;
+	h1 {
+		color: $white;
+    	display: inline;
+		font-family: 'Handlee', cursive;
+		font-size: 46px;
+    	position: relative;
+		margin: 10px 0;
 	}
-
-	&.close {
-		top:0;
-		left: 0;
- 		animation: close 0.5s none linear;
- 		width: 50px;
-		height: 50px;;
- 		opacity: 1;
- 		background: red;
-
- 		.menu-button__line {
-	 		position: absolute;
-
-			&--top {
-				transform: rotate(0deg);
-  				transition: 0.55s;
-			}
-
-			&--middle {
-				opacity: 1;
-			}
-
-			&--bottom {
-				transform: rotate(-0deg);
-		  		transition: 0.55s;
-			}
-		}
-	}
-}
-
-
-@keyframes open{
-  0%{
-    width: 50px;
-	height: 100px;
-  }
-  100%{
-    width: 100%;
-	height: 100%;
-	background: red;
-  }
-}
-
-
-@keyframes close{
-  0%{
-    width: 100%;
-	height: 100%;
-  }
-  100%{
-    width: 50px;
-	height: 100px;
-	background: transparent;
-  }
-}
-
-.menu-button {
-	width: 30px;
-	max-width: 100%;
-	
-	cursor: pointer;
-}
-
-.menu-button__line {
-	height: 5px;
-	width: 30px;
+  &.cursor h1:after {
+    content: " ";
     display: block;
-    background: #fff;
-    border-radius: 6px;
-    margin-top: 5px;
-
-	&--top {
-
-	}
-
-	&--middle {
-
-	}
-
-	&--bottom {
-
-	}
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: -5px;
+    width: 2px;
+    background-color: white;
+    z-index: 1;
+    animation: flash 0.5s none infinite alternate;
+  }
 }
 
-.menu-nav {
-	position: absolute;
-	list-style: none;
-	text-align: center;
-	width: 100%;
-	top: 20vh;
-	li {
-		margin-top: 10px;
-		a {
-			font-size: 36px;
-			color: $white;
-			font-family: 'Happy Monkey', cursive;
-			text-decoration: none;
-		}		
+.heading-link-wrapper {
+  text-align: center
+}
+
+.header__links-wrapper {
+	margin: 20px;
+  text-align: center;
+}
+
+.text-js{
+  opacity: 0;
+}
+
+
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
+@media only screen and (max-width: 990px) {
+	.page__style:not(.home),
+	.page__style {
+		.heading-link-wrapper {
+			display: block;
+		}
+
+    .header__text,
+    .header__links-wrapper {
+      text-align: center;
+    }
+
+    .header__text {
+      margin: 20px 40px;
+    }
+    .header__links-wrapper {
+      margin: 20px;
+      min-width: auto;
+    }
 	}
 }

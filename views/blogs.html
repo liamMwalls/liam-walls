@@ -1,1 +1,6 @@
-<h1>Blog</h1>
+<div data-ng-controller="blogs">
+	<h1>Blog</h1>
+	<div data-ng-repeat="blog in blogs">
+		<a ng-click="openBlog(blog.blogId)">{{blog.title}}</a>
+	</div>
+</div>

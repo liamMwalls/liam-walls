@@ -1,0 +1,71 @@
+[debug] [2018-02-14T12:12:27.042Z] ----------------------------------------------------------------------
+[debug] [2018-02-14T12:12:27.045Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\liamwalls\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-02-14T12:12:27.045Z] CLI Version:   3.17.4
+[debug] [2018-02-14T12:12:27.045Z] Platform:      win32
+[debug] [2018-02-14T12:12:27.045Z] Node Version:  v6.11.3
+[debug] [2018-02-14T12:12:27.046Z] Time:          Wed Feb 14 2018 12:12:27 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T12:12:27.046Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-14T12:12:27.059Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-14T12:12:27.060Z] > authorizing via signed-in user
+[debug] [2018-02-14T12:12:27.063Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/liamwalls-d3e92  
+  
+ Wed Feb 14 2018 12:12:27 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T12:12:27.689Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-14T12:12:27.692Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/liamwalls-d3e92/tokens  
+  
+ Wed Feb 14 2018 12:12:27 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T12:12:28.273Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\liamwalls\Documents\repos\liam-walls'...
+[info] 
+[debug] [2018-02-14T12:12:28.279Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liamwalls-d3e92  
+  
+ Wed Feb 14 2018 12:12:28 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T12:12:28.972Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-14T12:12:28.974Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784565161207/clients/_:getWebAppConfig  
+  
+ Wed Feb 14 2018 12:12:28 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T12:12:29.432Z] <<< HTTP RESPONSE 200
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-02-14T16:21:33.422Z] ----------------------------------------------------------------------
+[debug] [2018-02-14T16:21:33.425Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\liamwalls\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-02-14T16:21:33.425Z] CLI Version:   3.17.4
+[debug] [2018-02-14T16:21:33.425Z] Platform:      win32
+[debug] [2018-02-14T16:21:33.425Z] Node Version:  v6.11.3
+[debug] [2018-02-14T16:21:33.426Z] Time:          Wed Feb 14 2018 16:21:33 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T16:21:33.426Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-14T16:21:33.447Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-14T16:21:33.448Z] > authorizing via signed-in user
+[debug] [2018-02-14T16:21:33.451Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-14T16:21:33.451Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/aCFe9WzvfQYFTJZai2jZD_gfAyADkbeVVd2E5_XE1M8',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Feb 14 2018 16:21:33 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T16:21:33.584Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-14T16:21:33.595Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/liamwalls-d3e92  
+  
+ Wed Feb 14 2018 16:21:33 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T16:21:34.221Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-14T16:21:34.222Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/liamwalls-d3e92/tokens  
+  
+ Wed Feb 14 2018 16:21:34 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T16:21:35.180Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\liamwalls\Documents\repos\liam-walls'...
+[info] 
+[debug] [2018-02-14T16:21:35.183Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liamwalls-d3e92  
+  
+ Wed Feb 14 2018 16:21:35 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T16:21:35.871Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-14T16:21:35.872Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784565161207/clients/_:getWebAppConfig  
+  
+ Wed Feb 14 2018 16:21:35 GMT+0000 (GMT Standard Time)
+[debug] [2018-02-14T16:21:36.312Z] <<< HTTP RESPONSE 200
+[info] +  hosting: Local server: http://localhost:5000
+
