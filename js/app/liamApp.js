@@ -1,4 +1,5 @@
 var liamApp = angular.module('liamApp', [
 	'ngRoute',
-	'blogs.controller'
+	'blogs.controller',
+	'about.controller',
 ]);

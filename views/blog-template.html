@@ -1,4 +1,6 @@
 <div data-ng-controller="blogs" class="blog-template">
+	<a href="/#/blogs">Back to blogs</a>
 	<h2 class="blog-template__heading">{{blogs[idNumber].title}}</h3>
+		<img src="/img/{{blogs[idNumber].imgSrc}}" alt="{{blogs[idNumber].title}}"/>
 	<div ng-bind-html="blogs[idNumber].text"></div>
 </div>

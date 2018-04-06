@@ -1,0 +1,36 @@
+.experience {
+  margin: 20px;
+  padding: 20px;
+  border-left: 1px solid black;
+  .experience__item {
+    margin-bottom: 50px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    p, h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 12px;
+    } 
+  }
+  
+}
+
+.middle {
+  position: relative;
+  &:before {
+      content: " ";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 5px;
+      left: -25px;
+      top: 6px;
+  }
+}

@@ -1,5 +1,3 @@
-
-
 angular.module('blogs.controller', ["firebase", "ngSanitize"])
 .controller('blogs', ['$scope' ,'$rootScope', '$firebaseArray', '$location', function ($scope, $rootScope, $firebaseArray) {
 	var ref = new Firebase("https://liamwalls-d3e92.firebaseio.com/blogs");

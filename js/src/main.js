@@ -107,3 +107,15 @@ $(function(){
       $('.page__style').removeClass('loading');
     }, 2200);
 })
+
+console.log("liam")
+
+setTimeout(function() {
+  $(".blogs-list__blog").on('click', function() {
+    console.log("liam")
+    var $this = $(this);
+
+    $this.find(".card-front").toggleClass("rotate-card-front");
+    $this.find(".card-back").toggleClass("rotate-card-back");
+  });
+}, 500);

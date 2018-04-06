@@ -5,12 +5,14 @@
 .header__text {
   margin: 20px;
   text-align: center;
+  min-height: 61px;
+
 	h1 {
 		color: $white;
-    	display: inline;
+  	display: inline;
 		font-family: 'Handlee', cursive;
 		font-size: 46px;
-    	position: relative;
+  	position: relative;
 		margin: 10px 0;
 	}
   &.cursor h1:after {
